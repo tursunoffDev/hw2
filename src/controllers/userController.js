@@ -23,7 +23,7 @@ const changeProfilePassword = asyncHandler(async (req, res) => {
       throw new Error('Please insert correct password');
     }
   } else {
-    res.status(404);
+    res.status(500);
     throw new Error('User not found');
   }
 });
@@ -39,7 +39,7 @@ const getProfileInfo = asyncHandler(async (req, res) => {
       },
     });
   } else {
-    res.status(404);
+    res.status(500);
     throw new Error('User not found');
   }
 });
